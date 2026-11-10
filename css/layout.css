@@ -1,0 +1,103 @@
+/* 基礎排版與雙欄 Grid 結構 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #F5F2EB;
+    color: #2C3531;
+    line-height: 1.6;
+}
+.navbar {
+    background-color: #2C5E3B;
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.nav-brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #F5F2EB;
+}
+.nav-links {
+    display: flex;
+    gap: 1.2rem;
+}
+.nav-links a {
+    color: #E8DFD1;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+.nav-links a:hover {
+    color: #C69C6D;
+}
+.container {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    max-width: 1300px;
+    margin: 2rem auto;
+    gap: 2rem;
+    padding: 0 1.5rem;
+}
+.sidebar {
+    background-color: #EDE8DE;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #D8CEBC;
+    height: fit-content;
+    position: sticky;
+    top: 5rem;
+}
+.sidebar h3 {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    color: #2C5E3B;
+    border-bottom: 2px solid #C69C6D;
+    padding-bottom: 0.5rem;
+}
+.sidebar ul {
+    list-style: none;
+}
+.sidebar li {
+    margin-bottom: 0.8rem;
+}
+.sidebar a {
+    color: #4A4A4A;
+    text-decoration: none;
+    display: block;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+.sidebar a:hover {
+    background-color: #2C5E3B;
+    color: #FFFFFF;
+}
+.content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #2C3531;
+    color: #C69C6D;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
