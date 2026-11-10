@@ -1,17 +1,19 @@
-/* 基礎排版與雙欄 Grid 結構 */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: #F5F2EB;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    background-color: #F5F2EB; /* 復古米白底色 */
     color: #2C3531;
-    line-height: 1.6;
+    line-height: 1.7;
 }
+
+/* 頂部導覽列：帝國糖廠深綠色調 */
 .navbar {
-    background-color: #2C5E3B;
+    background-color: #2C5E3B; /* 糖廠綠 */
     color: #FFFFFF;
     padding: 1rem 2rem;
     display: flex;
@@ -20,84 +22,101 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
+
 .nav-brand {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
+    letter-spacing: 1px;
     color: #F5F2EB;
 }
+
 .nav-links {
     display: flex;
-    gap: 1.2rem;
+    gap: 1.5rem;
 }
+
 .nav-links a {
     color: #E8DFD1;
     text-decoration: none;
     font-size: 0.95rem;
-    transition: color 0.2s;
+    transition: color 0.3s;
 }
+
 .nav-links a:hover {
-    color: #C69C6D;
+    color: #C69C6D; /* 蔗糖黃銅金 */
 }
+
+/* Grid Layout 主分頁架構 */
 .container {
     display: grid;
     grid-template-columns: 260px 1fr;
-    max-width: 1300px;
-    margin: 2rem auto;
-    gap: 2rem;
-    padding: 0 1.5rem;
+    min-height: calc(100vh - 120px);
+    max-width: 1400px;
+    margin: 0 auto;
 }
+
+/* 側邊欄：質感暖調木紋選單 */
 .sidebar {
-    background-color: #EDE8DE;
-    padding: 1.5rem;
-    border-radius: 10px;
-    border: 1px solid #D8CEBC;
-    height: fit-content;
-    position: sticky;
-    top: 5rem;
+    background-color: #E8DFD1;
+    border-right: 1px solid #D5C7B3;
+    padding: 2rem 1.5rem;
 }
+
 .sidebar h3 {
-    font-size: 1.05rem;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
     color: #2C5E3B;
     border-bottom: 2px solid #C69C6D;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
 }
+
 .sidebar ul {
     list-style: none;
 }
+
 .sidebar li {
     margin-bottom: 0.8rem;
 }
+
 .sidebar a {
-    color: #4A4A4A;
+    color: #4A3E3D;
     text-decoration: none;
     display: block;
-    padding: 0.4rem 0.6rem;
-    border-radius: 4px;
-    transition: all 0.2s;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
 }
+
 .sidebar a:hover {
     background-color: #2C5E3B;
     color: #FFFFFF;
 }
+
+/* 主內容區 */
 .content-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    padding: 2.5rem;
 }
+
 .tab-content {
     display: none;
 }
+
 .tab-content.active {
     display: block;
+    animation: fadeIn 0.4s ease-in-out;
 }
-.footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: #2C3531;
-    color: #C69C6D;
-    margin-top: 3rem;
-    font-size: 0.9rem;
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
 }
