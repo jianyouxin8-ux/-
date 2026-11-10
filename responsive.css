@@ -1,0 +1,66 @@
+/* 卡片元件 */
+.card {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(44, 94, 59, 0.08);
+    margin-bottom: 1.8rem;
+    border-left: 5px solid #2C5E3B; /* 左側綠色邊條 */
+}
+
+.card h2, .card h3 {
+    margin-bottom: 1rem;
+    color: #2C5E3B;
+}
+
+.card p, .card li {
+    margin-bottom: 0.8rem;
+    color: #4A4A4A;
+}
+
+.card ul {
+    padding-left: 1.2rem;
+}
+
+/* Slogan 強調金黃區塊 */
+.highlight-slogan {
+    background-color: #FDF8EC;
+    border: 1px dashed #C69C6D;
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin-top: 1.2rem;
+    font-size: 1.15rem;
+    color: #8C5A2B;
+    text-align: center;
+}
+
+/* 影片響應式容器 */
+.video-container {
+    text-align: center;
+}
+
+.responsive-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    margin-top: 1rem;
+}
+
+.responsive-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* 頁尾 */
+.footer {
+    background-color: #2C5E3B;
+    color: #E8DFD1;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
